@@ -3,8 +3,8 @@ const usrEmail = document.getElementById('usrmail');
 const imgError = document.getElementById('img-error');
 const validMsg = document.getElementById("valid-mail-msg");
 
+// Validation pattern ==> Regular Expression  
 const pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-
 
 function validation(){
 
@@ -18,10 +18,10 @@ function validation(){
 
         validMsg.style.display = "initial"
         imgError.style.display = "initial"
-
-    }
+    }// end of is else satatment
     
    
-}
-btnJoin.addEventListener('click', validation)
+}// end of validation function
+
+btnJoin.addEventListener('click', validation);
 
