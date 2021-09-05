@@ -1,0 +1,201 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"); */
+
+* {
+  margin: 0;
+  padding: 0;
+  /* font-family: "Josefin Sans", sans-serif; */
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  background-image: url(/images/bg-pattern-mo.svg);
+  grid-template-columns: auto auto auto auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto auto auto;
+}
+
+.logo {
+  grid-area: 1 / 1 / 2 / 4;
+  margin-left: 20%;
+  margin-top: 5%;
+}
+
+.landing-form {
+  grid-area: 2 / 1 / 8 / 4; /* grid-area: row start / column start / row end / column end  */
+}
+
+.landing-form h1 {
+  font-size: 80px;
+  text-transform: uppercase;
+  letter-spacing: 15px;
+  font-weight: 400;
+  opacity: 0.9;
+  text-align: start;
+  margin-left: 20%;
+  margin-top: 5%;
+}
+
+.landing-form .info {
+  line-height: 30px;
+  text-align: start;
+  margin-left: 20%;
+  margin-top: 3%;
+  color: #ef9796;
+}
+
+.landing-form form {
+  margin-left: 20%;
+  margin-top: 3%;
+  position: relative;
+}
+
+.landing-form form input {
+  width: 60%;
+  height: 50px;
+  padding: 10px 10px 10px 20px;
+  font-size: 18px;
+  border-radius: 20px;
+  outline: none;
+  border: 2px solid #e2d7d7;
+}
+
+.landing-form form input:focus {
+  border: 2px solid #f19b9a;
+}
+
+.landing-form form button {
+  width: 12%;
+  height: 50px;
+  position: absolute;
+  left: 50%;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  background-image: linear-gradient(to right, #f6b5b6, #ef9796);
+}
+
+.landing-form form #img-error {
+  position: absolute;
+  left: 46%;
+  top: 25%;
+  display: none;
+}
+
+.landing-form form button:hover {
+  background-color: #f6b5b6;
+  transform: scale(1.1);
+  filter: drop-shadow(0 2mm 1mm gray);
+  cursor: pointer;
+}
+
+#valid-mail-msg {
+  color: #f57573;
+  text-align: start;
+  margin-left: 23%;
+  margin-top: 50px;
+  display: none;
+}
+
+.landing-img {
+  grid-area: 1 / 4 / 8 / 8;
+  background-image: url(/images/hero-desktop.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* For Mobile */
+
+@media only screen and (max-width: 600px) {
+  .container {
+    display: grid;
+    width: 100vw;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
+  }
+
+  .logo {
+    grid-area: 1 / 1 / 2 / 4;
+    margin-left: 5%;
+    margin-top: 3%;
+  }
+
+  .landing-img {
+    grid-area: 3 / 1 / 12/ 4;
+    background-image: url(/images/hero-mobile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+  }
+
+  .landing-form {
+    grid-area: 12 / 1 / 20 / 4;
+  }
+
+  .landing-form h1 {
+    text-align: center;
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    font-weight: 400;
+    opacity: 0.9;
+    margin-left: 5%;
+    margin-top: 10%;
+    line-height: 40px;
+  }
+
+  .landing-form .info {
+    font-size: 14px;
+    line-height: 25px;
+    text-align: center;
+    color: #ef9796;
+    margin-right: 90px;
+  }
+
+  .landing-form form input {
+    width: 80%;
+    height: 50px;
+    padding: 5px 5px 5px 10px;
+    font-size: 16px;
+    border-radius: 20px;
+    outline: none;
+    border: 2px solid #e2d7d7;
+  }
+
+  .landing-form form input:focus {
+    border: 2px solid #f19b9a;
+  }
+
+  .landing-form form #img-error {
+    position: absolute;
+    left: 62%;
+    top: 25%;
+    display: none;
+  }
+
+  .landing-form form button {
+    width: 20%;
+    height: 50px;
+    position: absolute;
+    left: 70%;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    background-image: linear-gradient(to right, #f6b5b6, #ef9796);
+  }
+
+  .landing-form form button:hover {
+    background-color: #f6b5b6;
+    transform: scale(1.1);
+    filter: drop-shadow(0 2mm 1mm gray);
+    cursor: pointer;
+  }
+
+  #valid-mail-msg {
+    color: #f57573;
+    text-align: start;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: none;
+  }
+} /* end of media query */
