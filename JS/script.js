@@ -8,16 +8,20 @@ const pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
 function validation(){
 
-    if (pattern.test(usrEmail.value)) {
+    if (usrEmail.value == "") {
 
-        validMsg.style.display = "none"
-        imgError.style.display = "none"
-        alert('Login successfully')
-
-    } else {
-
-        validMsg.style.display = "initial"
         imgError.style.display = "initial"
+
+    } else if (pattern.test(usrEmail.value)){
+        imgError.style.display = "none"
+        validMsg.style.display = "none"
+        
+        alert('Login successfully')
+    }
+     else {
+        imgError.style.display = "none"
+        validMsg.style.display = "initial"
+       
     }// end of is else satatment
     
    
